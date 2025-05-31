@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Explore the latest technologies in embedded systems, including edge AI, RTOS, embedded Linux, and IoT security." />
+    <meta name="keywords"
+        content="Embedded Systems, Edge AI, RTOS, Embedded Linux, IoT, Microcontrollers, Real-Time Computing, Firmware Development" />
+    <meta name="author" content="Embedded Systems Insights" />
+    <title>Top Technologies in Embedded Systems</title>
+    <style>
+        :root {
+            --primary-1: #0a192f;
+        }
+        *, *::after, *::before {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background: var(--primary-1);
+            color: #fff;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        section {
+            padding: 2rem;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        article {
+            background: #fff;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            color: #0a192f;
+            margin-top: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+            background: #eaeaea;
+            color: #666;
+        }
+
+        .source {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .source a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .source a:hover {
+            text-decoration: underline;
+        }
+
+        section[id="3d-renderer-wrapper"] {
+            /* background-color: tomato;
+            overflow-x: hidden; */
+            height: 600px;
+            margin-bottom: 5rem;
+
+        }
+        
+        canvas {
+            width: 100% !important;
+            height: 100% !important;
+            display: block;
+        }
+
+        .ai-prompt-wrapper {
+            h2 {
+                text-align: center;
+            }
+
+            .ai-prompt {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1em;
+                
+                textarea {
+                    width: 100%;
+                    padding: 1em;
+                    display: block;
+                    max-width: 100%;
+                    min-width: 100%;
+                    min-height: min-content;
+                    border-radius: 5px;
+                    border: none;
+                    outline: none;
+                    font-family: inherit;
+                }
+
+                button {
+                    border-radius: 4px;
+                    border: none;
+                    padding: .75em 2em;
+                    color: rgb(34, 38, 49);
+                    background-color: #c5d1dd;
+                    font-family: Arial, sans-serif;
+                    cursor: pointer;
+                    transition: 50ms ease-in;
+                    
+                    &:hover {
+                        color: white;
+                        background-color: var(--primary-1);
+                    }
+                }
+            }
+
+            #response {
+                margin-top: 1rem;
+                border: 1px solid rgb(220, 220, 220);
+                box-shadow: 0 3px 5px 3px rgb(220, 220, 220);
+                border-radius: 7px;
+                padding: 2em 3em;
+                display: block;
+                width: 100%;
+                font-family: inherit;
+                white-space: pre-wrap;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                max-height: 500px;
+                overflow-y: auto;
+
+                code {
+                    background-color: rgb(236, 236, 236);
+                    padding: .25em;
+                    border-radius: 4px;
+                    border: 1px solid rgb(213, 213, 213);
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Cutting-Edge Technologies in Embedded Systems</h1>
+        <p>Stay ahead with the most powerful innovations in embedded development</p>
+    </header>
+
+    <section class="ai-prompt-wrapper">
+        <h2>Got a question?</h2>
+        <div class="ai-prompt">
+            <textarea name="prompt" id="prompt" placeholder="Ask anything"></textarea>
+            <button onclick="askAI()">Submit</button>
+        </div>
+        <pre id="response">
+        </pre>
+    </section>
+
+    <section>
+        <article>
+            <h2>1. Edge AI (Artificial Intelligence)</h2>
+            <p>
+                Edge AI enables embedded devices to process AI models locally using frameworks like TensorFlow Lite and
+                PyTorch Mobile.
+                Applications include real-time object detection, voice recognition, and predictive maintenance — all
+                without relying on cloud infrastructure.
+                Popular hardware: NVIDIA Jetson, Google Coral, and ARM Cortex-M with DSP extensions.
+            </p>
+            <p class="source">
+                Source: <a href="https://developer.nvidia.com/embedded-computing" target="_blank">NVIDIA Embedded
+                    Developer Portal</a>, <a href="https://www.tensorflow.org/lite" target="_blank">TensorFlow Lite</a>
+            </p>
+        </article>
+
+        <article>
+            <h2>2. Real-Time Operating Systems (RTOS)</h2>
+            <p>
+                RTOSes like FreeRTOS, Zephyr, and VxWorks are designed for deterministic performance.
+                They manage tasks, timing, and hardware events predictably, which is essential for applications like
+                medical devices, robotics, and aerospace systems.
+            </p>
+            <p class="source">
+                Source: <a href="https://www.freertos.org/" target="_blank">FreeRTOS.org</a>, <a
+                    href="https://www.zephyrproject.org/" target="_blank">Zephyr Project</a>, <a
+                    href="https://www.windriver.com/products/vxworks" target="_blank">VxWorks by Wind River</a>
+            </p>
+        </article>
+
+        <article>
+            <h2>3. Embedded Linux</h2>
+            <p>
+                Embedded Linux is a powerful platform for feature-rich embedded applications, offering multitasking,
+                networking, and filesystem support.
+                Systems like Yocto, Buildroot, and OpenWRT help developers customize Linux for constrained hardware like
+                Raspberry Pi, BeagleBone, and custom ARM boards.
+            </p>
+            <p class="source">
+                Source: <a href="https://www.yoctoproject.org/" target="_blank">Yocto Project</a>, <a
+                    href="https://buildroot.org/" target="_blank">Buildroot</a>, <a href="https://openwrt.org/"
+                    target="_blank">OpenWRT</a>
+            </p>
+        </article>
+
+        <article>
+            <h2>4. Secure IoT and Embedded Security</h2>
+            <p>
+                As devices become network-connected, embedded systems must be hardened with security technologies:
+                Secure Boot, TLS, Hardware Root of Trust (TPM), and OTA firmware signing are becoming standard.
+                Tools like Mbed TLS and wolfSSL are widely used to encrypt and protect data on the edge.
+            </p>
+            <p class="source">
+                Source: <a href="https://tls.mbed.org/" target="_blank">Mbed TLS</a>, <a href="https://www.wolfssl.com/"
+                    target="_blank">wolfSSL</a>, <a href="https://www.nxp.com/pages/secure-boot:SECURE-BOOT"
+                    target="_blank">NXP Secure Boot</a>
+            </p>
+        </article>
+
+        <article>
+            <h2>5. Low-Power Design and Energy Harvesting</h2>
+            <p>
+                Battery-powered and remote devices depend on ultra-low-power microcontrollers and sleep-state
+                management.
+                Technologies like ARM's Cortex-M0+, EFM32, and energy harvesting sensors enable long-term deployments
+                with minimal energy budgets.
+            </p>
+            <p class="source">
+                Source: <a href="https://www.silabs.com/development-tools/mcu/efm32-zero-gecko-starter-kit"
+                    target="_blank">Silicon Labs EFM32</a>, <a
+                    href="https://www.arm.com/products/silicon-ip-cpu/cortex-m/cortex-m0-plus" target="_blank">ARM
+                    Cortex-M0+</a>
+            </p>
+        </article>
+
+        <article>
+            <h2>6. Wireless Communication Protocols</h2>
+            <p>
+                Embedded systems use protocols like Bluetooth Low Energy (BLE), Zigbee, LoRaWAN, and NB-IoT for
+                efficient, low-power communication.
+                These technologies enable smart agriculture, remote sensors, and wearable health devices to operate over
+                long distances with low energy use.
+            </p>
+            <p class="source">
+                Source: <a
+                    href="https://www.bluetooth.com/learn-about-bluetooth/bluetooth-technology/bluetooth-low-energy/"
+                    target="_blank">Bluetooth LE</a>,
+                <a href="https://www.zigbee.org/" target="_blank">Zigbee Alliance</a>,
+                <a href="https://lora-alliance.org/" target="_blank">LoRa Alliance</a>,
+                <a href="https://www.gsma.com/iot/mobile-iot/" target="_blank">GSMA on NB-IoT</a>
+            </p>
+        </article>
+    </section>
+
+    <section id="3d-renderer-wrapper">
+
+    </section>
+
+    <script>
+        // Optional: Simple animation or enhancement
+        window.addEventListener("load", () => {
+            document.querySelectorAll("article").forEach((el, i) => {
+                el.style.opacity = 0;
+                setTimeout(() => {
+                    el.style.transition = "opacity 0.6s ease";
+                    el.style.opacity = 1;
+                }, i * 100);
+            });
+        });
+    </script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="{{ url_for('static', filename='three.js')}}"></script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+Model Information:
+* title:	cctv camera
+* source:	https://sketchfab.com/3d-models/cctv-camera-4d33a847fcb04bc5a4f1cbacc5c09a03
+* author:	ASHISH (https://sketchfab.com/3dmodelsmith)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "cctv camera" (https://sketchfab.com/3d-models/cctv-camera-4d33a847fcb04bc5a4f1cbacc5c09a03) by ASHISH (https://sketchfab.com/3dmodelsmith) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

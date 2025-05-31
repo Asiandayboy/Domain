@@ -1,0 +1,11 @@
+Model Information:
+* title:	AUV Model
+* source:	https://sketchfab.com/3d-models/auv-model-a504bfe01f9e474d8d771a5c4124c825
+* author:	Aravindhyokesh (https://sketchfab.com/Aravindhyokesh)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "AUV Model" (https://sketchfab.com/3d-models/auv-model-a504bfe01f9e474d8d771a5c4124c825) by Aravindhyokesh (https://sketchfab.com/Aravindhyokesh) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

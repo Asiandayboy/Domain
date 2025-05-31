@@ -1,0 +1,11 @@
+Model Information:
+* title:	CCTV camera
+* source:	https://sketchfab.com/3d-models/cctv-camera-281b2b84260447e49ab4a6b34bf78697
+* author:	Just8 (https://sketchfab.com/Just8)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "CCTV camera" (https://sketchfab.com/3d-models/cctv-camera-281b2b84260447e49ab4a6b34bf78697) by Just8 (https://sketchfab.com/Just8) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
