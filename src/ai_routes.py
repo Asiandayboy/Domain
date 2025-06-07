@@ -2,6 +2,7 @@ from flask import Blueprint, request, jsonify
 from ai_service import get_ai_response
 from cache import get_cached_response, set_cached_response
 from flasgger import swag_from
+from uids_routes import MODEL_INFO
 
 ai_bp = Blueprint("ai", __name__)
 
@@ -41,9 +42,17 @@ def ask():
     """
     data = request.get_json()
     prompt = data.get("prompt")
+    model_id = data.get("model_id")
 
     if not prompt:
         return jsonify({ "error": "No prompt provided" }), 400
+    
+    if model_id and model_id in MODEL_INFO:
+        context = MODEL_INFO[model_id]
+        model_name = context.get("name", "")
+        model_desc = context.get("description", "")
+        model_ctx = context.get("embedded_context", "")
+        prompt = f"This question is about {model_name}. {model_desc}. Some context: {model_ctx}.\n\nPrompt: {prompt}"
     
     # check if prompt is cahced
     cached = get_cached_response(prompt)

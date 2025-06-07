@@ -24,6 +24,7 @@
             margin: 0;
             padding: 0;
             color: #333;
+            margin-bottom: 2rem;
         }
 
         header {
@@ -79,22 +80,102 @@
             text-decoration: underline;
         }
 
-        section[id="3d-renderer-wrapper"] {
-            /* background-color: tomato;
-            overflow-x: hidden; */
-            height: 600px;
-            margin-bottom: 5rem;
+        #interactive-guide {
+            display: flex;
+
+            margin: 0 auto;
+            max-width: 1440px
 
         }
+
+        section[id="threejs-wrapper"] {
+            /* background-color: tomato; */
+
+            width: 55%;
+            flex-shrink: 0;
+            display: flex;
+            margin: 0;
+            align-self: flex-start;
+            flex-direction: column;
+            gap: 2em;
+
+            h2, p {
+                text-align: center;
+            }
+
+            p {
+                margin: 0;
+                font-style: italic;
+            }
+
+            .subheader {
+                color: rgb(104, 116, 122);
+            }
+
+            div[id="3d-renderer"] {
+                /* background-color: tomato;
+                overflow-x: hidden; */
+                height: 450px;
+            }
+
+            .model-info {
+                padding: 0 2em;
+                h3 {
+                    text-align: center;
+                    margin-top: 0;
+                }
+
+                p {
+                    line-height: 1.75rem;
+                    color: rgb(70, 70, 70);
+                }
+            }  
+            
+            canvas {
+                width: 100% !important;
+                height: 100% !important;
+                display: block;
+                border-radius: 10px;
+                box-shadow: 0 0 5px 0px rgb(152, 162, 177);
+            }
+
+            .three-js-buttons {
+
+                display: flex;
+                justify-content: center;
+                gap: 1em;
+
+                button {
+                    background-color: #0066cc;
+                    padding: .5em 2em;
+                    cursor: pointer;
+                    border: none;
+                    border-radius: 5px;
+                    color: white;
+                    font-family: inherit;
+                    font-size: 1rem;
+                    box-shadow: 0 0px 1px 1px rgb(184, 196, 214);
+
+                    &:hover {
+                        background-color: #003f7e;
+                    }
+                }
+            }
         
-        canvas {
-            width: 100% !important;
-            height: 100% !important;
-            display: block;
+            #counter {
+                text-align: center;
+            }
         }
+
 
         .ai-prompt-wrapper {
-            h2 {
+            /* background-color: orange; */
+            margin: 0;
+            width: 45%;
+            align-self: center;
+
+            text-align: left;
+            h3 {
                 text-align: center;
             }
 
@@ -112,32 +193,36 @@
                     min-width: 100%;
                     min-height: min-content;
                     border-radius: 5px;
+                    font-size: .9rem;
                     border: none;
                     outline: none;
                     font-family: inherit;
+                    border: 1px solid rgb(220, 220, 220);
                 }
 
                 button {
                     border-radius: 4px;
                     border: none;
-                    padding: .75em 2em;
+                    padding: .5em 2em;
                     color: rgb(34, 38, 49);
-                    background-color: #c5d1dd;
+                    background-color: #e95220;
+                    box-shadow: 0 0px 1px 1px rgb(184, 196, 214);
                     font-family: Arial, sans-serif;
+                    font-size: .9rem;
                     cursor: pointer;
-                    transition: 50ms ease-in;
+                    color: white;
                     
                     &:hover {
-                        color: white;
-                        background-color: var(--primary-1);
+                        background-color: #b8431b;
                     }
                 }
             }
 
             #response {
+                background-color: white;
                 margin-top: 1rem;
                 border: 1px solid rgb(220, 220, 220);
-                box-shadow: 0 3px 5px 3px rgb(220, 220, 220);
+                /* box-shadow: 0 3px 5px 3px rgb(220, 220, 220); */
                 border-radius: 7px;
                 padding: 2em 3em;
                 display: block;
@@ -148,6 +233,8 @@
                 overflow-wrap: break-word;
                 max-height: 500px;
                 overflow-y: auto;
+
+                display: none;
 
                 code {
                     background-color: rgb(236, 236, 236);
@@ -165,16 +252,6 @@
         <h1>Cutting-Edge Technologies in Embedded Systems</h1>
         <p>Stay ahead with the most powerful innovations in embedded development</p>
     </header>
-
-    <section class="ai-prompt-wrapper">
-        <h2>Got a question?</h2>
-        <div class="ai-prompt">
-            <textarea name="prompt" id="prompt" placeholder="Ask anything"></textarea>
-            <button onclick="askAI()">Submit</button>
-        </div>
-        <pre id="response">
-        </pre>
-    </section>
 
     <section>
         <article>
@@ -270,9 +347,33 @@
         </article>
     </section>
 
-    <section id="3d-renderer-wrapper">
-
-    </section>
+    <div id="interactive-guide">
+        <section id="threejs-wrapper">
+            <div>
+                <h2>3D Models of Real-World Devices Powered by Embedded Systems</h2>
+                <p class="subheader">Navigate with the buttons to cycle through the models.</p>
+            </div>
+            <div id="3d-renderer"></div>
+            <div class="model-info">
+                <h3 id="model-name">Some Stoplights</h3>
+                <p id="model-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit magnam obcaecati accusamus ut, aut deserunt eius facere provident cupiditate ratione.</p>
+            </div>
+            <div class="three-js-buttons">
+                <button id="prev">Prev</button>
+                <button id="next">Next</button>
+            </div>
+            <div id="counter">1/8</div>
+        </section>
+        <section class="ai-prompt-wrapper">
+            <h3>Want to know more about this device?</h3>
+            <div class="ai-prompt">
+                <textarea name="prompt" id="prompt" placeholder="(Responses will take a while to load, around 5s or more)"></textarea>
+                <button id="ai-submit-btn">Ask</button>
+            </div>
+            <pre id="response">
+            </pre>
+        </section>
+    </div>
 
     <script>
         // Optional: Simple animation or enhancement
@@ -286,8 +387,7 @@
             });
         });
     </script>
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
-    <script src="{{ url_for('static', filename='three.js')}}"></script>
+    <script src="{{ url_for('static', filename='main.js')}}"></script>
 </body>
 
 </html>

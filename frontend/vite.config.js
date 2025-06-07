@@ -8,7 +8,7 @@ export default defineConfig({
         rollupOptions: {
             input: resolve(__dirname, "src/main.js"),
             output: {
-                entryFileNames: "three.js"
+                entryFileNames: "main.js"
             }
         }
     }
