@@ -1,7 +1,7 @@
 # Domain Site: Embedded Systems
 
 ## How to run
-1. install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
 2. Clone the repository into a folder:
 
@@ -22,6 +22,6 @@
     ```
 
 5. Access the app
-- Flask app: http://localhost:5000
-- Prometheus: http://localhost:9090
+    - Flask app: http://localhost:5000
+    - Prometheus: http://localhost:9090
 
