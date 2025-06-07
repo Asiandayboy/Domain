@@ -1,0 +1,14 @@
+services:
+  flask-app:
+    build: .
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./.env
+
+  prometheus:
+    image: prom/prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yaml:/etc/prometheus/prometheus.yml
