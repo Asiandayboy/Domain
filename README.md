@@ -10,7 +10,8 @@
     cd <path to folder to cloned it into>
     ```
 
-3. Create an .env file in the root directory with the following keys
+3. Create an .env file in the root directory with the following keys.
+You'll need to create accounts for Google Gemini and SketchFab.
     ```env
     GG_API_KEY=<api key for google gemini>
     SF_API_KEY=<api key for SketchFab>
