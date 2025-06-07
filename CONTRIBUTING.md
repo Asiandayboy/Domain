@@ -6,7 +6,7 @@ Welcome, and thanks for your interest in contributing to this project! 🎉 This
 
 1. **Fork** the repository and **clone** your fork:
    ```
-   git clone https://github.com/your-username/your-flask-app.git
+   git clone https://github.com/Asiandayboy/domain.git
    cd your-flask-app
    ```
 
@@ -23,22 +23,10 @@ Welcome, and thanks for your interest in contributing to this project! 🎉 This
 
 4. **Run the app locally**:
    ```
-   flask run
+   python src/app.py
    ```
 
-## 🧪 Running Tests
 
-We use `pytest` for testing.
-
-To run tests:
-```
-pytest
-```
-
-To install it (if not already installed):
-```
-pip install pytest
-```
 
 ## ✏️ Making Contributions
 
@@ -84,20 +72,6 @@ responses:
 """
 ```
 
-## 📦 Project Structure Suggestions
-
-```
-your-flask-app/
-│
-├── app/                   # Main Flask app
-│   ├── __init__.py
-│   ├── routes.py
-│   └── ...
-├── tests/                 # Unit tests
-├── requirements.txt
-├── Dockerfile             # (Optional) For containerization
-└── README.md
-```
 
 ## 🤝 Code of Conduct
 
